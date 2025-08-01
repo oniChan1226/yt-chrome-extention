@@ -46,7 +46,7 @@
         };
         console.log("New Bookmark:: ", newBookmark)
         chrome.storage.sync.set({
-            [currentVideo]: JSON.stringify([...currentVideoBookmarks, newBookmark]).sort((a, b) => a.time - b.time),
+            [currentVideo]: JSON.stringify([...currentVideoBookmarks, newBookmark].sort((a, b) => a.time - b.time)),
         })
     };
 
